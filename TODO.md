@@ -1,0 +1,40 @@
+# 待练习的内容
+
+- [ ] 管理资源
+- [ ] 管理输出
+- [ ] 开发环境
+- [ ] 代码分离
+- [ ] 缓存
+- [ ] 创建库 - （lib (esm, umd) 打包CSS等等）
+- [ ] 环境变量
+- [ ] 构建性能
+- [ ] 内容安全策略
+- [ ] 开发
+- [ ] 依赖管理
+- [ ] 模块热替换（热更新）
+- [ ] Tree Shaking
+- [ ] 生成环境
+- [ ] 懒加载
+- [ ] ECMAScript 模块
+- [ ] Shimming 预置依赖
+- [ ] Typescript
+- [ ] 公共路径
+- [ ] 集成
+- [ ] Entry 高级用法
+- [ ] 模块解析（Resolve）
+- [ ] 优化（Optimization）
+- [ ] 插件（Plugins）
+- [ ] 缓存
+- [ ] 外部扩展 （Externals） - 排查本地依赖，使用外部依赖
+- [ ] 实验特性
+- [ ] Module Federation (模块联邦)
+- [ ] 浏览器兼容
+- [ ] 开发一个Loader
+- [ ] 开发一个Plugin
+- [ ] 集成React
+- [ ] 集成Vue
+- [ ] 开发React UI 库 
+- [ ] 开发Vue UI 库 
+- [ ] 阅读 arco-cli 源码
+- [ ] 阅读 father 源码
+ 
