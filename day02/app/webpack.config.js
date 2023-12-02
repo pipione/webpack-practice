@@ -8,6 +8,9 @@ module.exports = {
     path: __dirname + '/dist',
     filename: 'bundle.js'
   },
+  mode: 'development',
+  // mode: 'production',
+  devtool: 'hidden-source-map',
   module: {
     rules: [
       {
@@ -38,5 +41,9 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx']
+  },
+  optimization: {
+    usedExports: true,
+    // minimize: true,
   }
 }

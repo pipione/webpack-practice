@@ -12,16 +12,31 @@
 ## 疑问
 
 - Tree Shaking package.json 配置 sideEffects 和 不配置的区别？
+  - 在 mode: 'production' 下，不配置 sideEffects 也会自动开启 Tree Shaking
 - 使用ProvidePlugin 和 import-loader 的区别？
   - 它们都是自动加载模块的工具（自动import等）
   - ProvidePlugin 是针对全局的注入依赖
   - import-loader 是针对局部的注入依赖
 
 
+
 ### 遇到的问题
+
+- 安装webpack 官网配置了 optimization 和 "sideEffects": false， Tree Shaking 无效
+```javascript
+ // 需要配置 minimize 才会生效
+  optimization: {
+    usedExports: true
+    // minimize: true,
+  }
+```
+
 
 ### 感悟
 
 
 ### 总结
 
+- 关于输出优化，基本配置 mode: 'production' 就可以了，不需要额外配置.
+- sideEffects 的作用
+  - 配置sideEffects可以提高Tree Shaking的效率，帮助Webpack更精确地识别并移除未使用的代码
