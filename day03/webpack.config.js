@@ -3,18 +3,15 @@ module.exports = {
   entry: {
     index: {
       import: './src/index.js',
-      dependOn: 'shared',
     },
     index2: {
       import: './src/index2.js',
-      dependOn: 'shared',
     },
-    shared: 'lodash',
   },
   mode: 'development',
-  // devtool: 'source-map', // 生成单独的sourcemap文件
+  devtool: 'source-map', // 生成单独的sourcemap文件
   // devtool: 'eval',
-  devtool: 'nosources-source-map',
+  // devtool: 'nosources-source-map',
   // devtool: 'hidden-source-map', // 生成单独的sourcemap文件, 和 source-map 一样，但不会在 bundle 末尾追加注释
 
   output: {
@@ -36,6 +33,11 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
