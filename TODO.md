@@ -5,18 +5,18 @@
 - [ ] 开发环境
 - [ ] 代码分离
 - [ ] 缓存
-- [ ] 创建库 - （lib (esm, umd) 打包CSS等等）
+- [X] 创建库 - （lib (esm, umd) 打包CSS等等）
 - [ ] 环境变量
 - [ ] 构建性能
 - [ ] 内容安全策略
 - [ ] 开发
 - [ ] 依赖管理
 - [ ] 模块热替换（热更新）
-- [ ] Tree Shaking
+- [X] Tree Shaking
 - [ ] 生成环境
 - [ ] 懒加载
 - [ ] ECMAScript 模块
-- [ ] Shimming 预置依赖
+- [X] Shimming 预置依赖
 - [ ] Typescript
 - [ ] 公共路径
 - [ ] 集成

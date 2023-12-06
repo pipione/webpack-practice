@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: 'ali';
+    src: url('../public/AlimamaFangYuanTiVF-Thin.ttf');
+}
+.app {
+    display: flex;
+    font-family: 'ali';
+}

@@ -22,7 +22,7 @@
 
 ### 遇到的问题
 
-- 安装webpack 官网配置了 optimization 和 "sideEffects": false， Tree Shaking 无效
+- 按照 webpack 官网配置了 optimization 和 "sideEffects": false， Tree Shaking 无效
 ```javascript
  // 需要配置 minimize 才会生效
   optimization: {
