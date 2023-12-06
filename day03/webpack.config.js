@@ -1,6 +1,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared',
+    },
+    index2: {
+      import: './src/index2.js',
+      dependOn: 'shared',
+    },
+    shared: 'lodash',
+  },
   mode: 'development',
   // devtool: 'source-map', // 生成单独的sourcemap文件
   // devtool: 'eval',
