@@ -2,8 +2,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
+  // devtool: 'source-map', // 生成单独的sourcemap文件
+  // devtool: 'eval',
+  devtool: 'nosources-source-map',
+  // devtool: 'hidden-source-map', // 生成单独的sourcemap文件, 和 source-map 一样，但不会在 bundle 末尾追加注释
+
   output: {
     clean: true,
+    filename: '[name].[hash].bundle.js',
   },
   devServer: {
     hot: true,
