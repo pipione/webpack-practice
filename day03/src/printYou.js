@@ -1,5 +1,6 @@
-import _ from 'lodash';
 export const printYou = () => {
 
-  console.log('printYou', _.join(['You', 'are', 'so', 'beautiful'], ' '));
+  import(/* webpackChunkName: "lodash" */ 'lodash').then(({ default: _ }) => {
+    console.log('printYou', _.join(['You', 'are', 'so', 'beautiful'], ' '));
+  })
 }

@@ -34,11 +34,6 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
