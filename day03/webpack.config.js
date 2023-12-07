@@ -16,7 +16,7 @@ module.exports = {
 
   output: {
     clean: true,
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[name].[contenthash:8].bundle.js',
   },
   devServer: {
     hot: true,
@@ -34,7 +34,37 @@ module.exports = {
       }
     ]
   },
-
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+        async: {
+          name: 'async',
+          chunks: 'async',
+          minChunks: 2,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+        sync: {
+          name: 'sync',
+          chunks: 'initial',
+          minChunks: 2,
+          priority: 20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
