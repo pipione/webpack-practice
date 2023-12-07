@@ -16,7 +16,7 @@ module.exports = {
 
   output: {
     clean: true,
-    filename: '[name].[hash].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
   },
   devServer: {
     hot: true,
@@ -34,6 +34,7 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
