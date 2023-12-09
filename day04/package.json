@@ -1,0 +1,12 @@
+{
+  "name": "day04",
+  "version": "1.0.0",
+  "description": "一周熟练Webpack 计划",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
