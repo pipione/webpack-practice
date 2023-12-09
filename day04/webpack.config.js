@@ -1,5 +1,6 @@
 const htmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
+  entry: './src/index.jsx',
   devServer: {
     hot: true,
     // 仅尝试热更新，而不会在热更新失败时回退到完全刷新。
@@ -7,6 +8,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'] // 将 JSX 编译成 JavaScript
+      },
       {
         test: /\.css$/,
         use: [
@@ -20,6 +26,7 @@ module.exports = {
   },
   plugins: [
     new htmlWebpackPlugin({
+      template: './public/index.html',
       title: 'webpack demo',
       filename: 'index.html'
     })
