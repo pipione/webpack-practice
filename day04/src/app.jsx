@@ -1,11 +1,9 @@
-import { hot } from 'react-hot-loader/root';
-
-import {BComp} from './b-comp';
+import { BComp } from './b-comp';
 
 const AppInner = () => {
   return (
     <div>
-      <h1>Hello World!2</h1>
+      <h1>Hello World!1</h1>
       <BComp/>
       <input type="text" placeholder="请输入" />
     </div>
@@ -14,4 +12,4 @@ const AppInner = () => {
 
 
 
-export const App =  hot(AppInner);
+export const App =  AppInner

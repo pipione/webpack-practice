@@ -136,3 +136,8 @@ module.exports = {
 
 
 ### 总结
+
+- React 模块热替换（热更新 （https://www.webpackjs.com/guides/hot-module-replacement/）
+  - 老旧的React可以使用 react-hot-loader React 16.8 之前用这个
+  - 推荐：新的React可以使用 react-refresh (@pmmmwh/react-refresh-webpack-plugin, react-refresh)， React 16.8 之后用这个
+  - create-react-app-从 4 开始支持了 react-refresh

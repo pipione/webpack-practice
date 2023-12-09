@@ -1,4 +1,6 @@
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
 module.exports = {
   entry: './src/index.jsx',
   devServer: {
@@ -11,7 +13,14 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'] // 将 JSX 编译成 JavaScript
+        use: {
+          loader: 'babel-loader',
+          options:{
+            plugins: [
+              require.resolve('react-refresh/babel')
+            ]
+          }
+        }
       },
       {
         test: /\.css$/,
@@ -25,6 +34,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new ReactRefreshWebpackPlugin(),
     new htmlWebpackPlugin({
       template: './public/index.html',
       title: 'webpack demo',
