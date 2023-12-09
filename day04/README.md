@@ -3,8 +3,6 @@
 
 - 构建性能
 - 内容安全策略
-- 开发环境
-- 依赖管理
 - 模块热替换（热更新）
 - 生产环境
 - 懒加载
@@ -99,6 +97,35 @@ module.exports = {
 
 12. **排除不必要的代码**：
     使用`externals`配置从bundle中排除某些依赖，如CDN引入的库。
+
+
+## 模块热替换（热更新）
+- 问题，没有热更新，每次都是刷新了页面
+  - 修改 js需要手动处理更新逻辑， 修改 css 会自动更新
+- 如果不想手动处理每个文件的热更新要怎么办呢
+```
+    // 这样配置，但是渲染处理的dom有问题，可能渲染两份（更新了几次就有几份）。
+  module.hot.accept(err => {
+    if (err) {
+      console.error('Cannot apply HMR update.', err);
+    }
+  });
+
+```
+```
+  devServer: {
+    hot: true
+  }
+  
+  // 需要这样手动处理热更新逻辑
+  
+  if (module.hot) {
+      module.hot.accept('./printMe.js', function() {
+        console.log('Accepting the updated printMe module!');
+        printMe();
+      })
+    }
+```
 
 ## 疑问
 
